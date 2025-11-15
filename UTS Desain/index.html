@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Dashboard — UTS Desain Web Lanjutan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">R</div>
+        <div class="brand-text">
+          <h1>Royal Dashboard</h1>
+          <p>Fakultas Ilmu Informasi</p>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li class="active"><a href="#">🏠 Home</a></li>
+          <li><a href="#">🎓 Mahasiswa</a></li>
+          <li><a href="#">🏫 Kelas</a></li>
+          <li><a href="#">📅 Aktifitas</a></li>
+          <li><a href="#">📊 Statistik</a></li>
+          <li><a href="#">📂 Dokumen</a></li>
+          <li><a href="#">⚙️ Settings</a></li>
+          <li><a href="#">🔓 Sign Out</a></li>
+        </ul>
+      </nav>
+      <footer> UTS • 2025</footer>
+    </aside>
+
+    <!-- ===== MAIN AREA ===== -->
+    <div class="main-area">
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <input type="search" placeholder="Cari Kelas, Dokumen, Aktifitas dll..." />
+        <div class="user">
+          <div class="info">
+            <p>Selamat Datang,</p>
+            <strong>Aidil Fitra kelas SI-3F</strong>
+            <span class="small" id="userNim">NIM: 24220168</span>
+          </div>
+          <img src="download (3).jpg.jpg" alt="Foto Aidil Fitra" class="avatar">
+        </div>
+      </header>
+
+      <!-- HERO / WELCOME -->
+      <section class="welcome">
+        <h2>Selamat Datang, Aidil Fitra</h2>
+        <p>Kamu memiliki Statistik, 3 Progres Kelas, 4 Aktifitas Selanjutnya dan 3 Lampiran Dokumen yang ada pada aplikasi ini.</p>
+      </section>
+
+      <!-- DASHBOARD GRID -->
+      <section class="dashboard">
+        <!-- Statistik -->
+        <div class="card stat">
+          <h3>Statistik Mahasiswa</h3>
+          <img src="Chart.svg" alt="Grafik Statistik Mahasiswa">
+        </div>
+
+        <!-- Progres -->
+        <div class="card side">
+          <h3>Progres Kelas</h3>
+          <p><strong>Matakuliah A</strong> — 78 Pendaftar</p>
+          <p><strong>Matakuliah B</strong> — 30 Pendaftar</p>
+          <p><strong>Matakuliah C</strong> — 40 Pendaftar</p>
+          <p><strong>Matakuliah D</strong> — 10 Pendaftar</p>
+        </div>
+
+        <!-- Aktivitas -->
+        <div class="card side">
+          <h3>Aktifitas Selanjutnya</h3>
+          <p><strong>Senin, 1 November 2025</strong> — Perkuliahan Daring 1</p>
+          <p><strong>Selasa, 2 November 2025</strong> — Perkuliahan Daring 1</p>
+          <p><strong>Rabu, 3 November 2025</strong> — Perkuliahan Daring 1</p>
+          <p><strong>Kamis, 4 November 2025</strong> — Perkuliahan Daring 1</p>
+        </div>
+      </section>
+
+      <!-- LAMPIRAN -->
+      <section class="lampiran card">
+        <h3>Lampiran Dokumen</h3>
+        <p>Lampiran dokumen tugas dan materi.</p>
+        <ul>
+          <li><strong>Lampiran Dokumen 1</strong> — Matakuliah A | Tugas Bersama Perkuliahan Daring | <a href="#">Lihat Dokumen</a></li>
+          <li><strong>Lampiran Dokumen 2</strong> — Matakuliah B | Tugas Bersama Perkuliahan Daring | <a href="#">Lihat Dokumen</a></li>
+          <li><strong>Lampiran Dokumen 3</strong> — Matakuliah C | Tugas Bersama Perkuliahan Daring | <a href="#">Lihat Dokumen</a></li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        © Universitas Royal — Program Studi Sistem Informasi — 2025
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+:root {
+  --blue: #0f62fe;
+  --darkblue: #1d4ed8;
+  --bg: #f5f7fb;
+  --text: #0f172a;
+  --muted: #6b7280;
+  --white: #fff;
+  --radius: 12px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* RESET */
+body { margin: 0; background: var(--bg); color: var(--text); }
+ul { list-style: none; padding: 0; margin: 0; }
+
+/* ===== SIDEBAR ===== */
+.app { display: flex; min-height: 100vh; }
+.sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, var(--darkblue), var(--blue));
+  color: #fff;
+  display: flex; flex-direction: column;
+  padding: 20px;
+}
+.brand { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.brand-logo {
+  background: #fff; color: var(--blue); font-weight: 700;
+  width: 40px; height: 40px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+}
+.brand-text h1 { font-size: 16px; margin: 0; }
+.brand-text p { font-size: 12px; margin: 0; color: #cbd5e1; }
+.sidebar nav ul li { margin: 8px 0; }
+.sidebar nav a {
+  display: block; padding: 8px 12px;
+  border-radius: 8px; color: #fff; text-decoration: none;
+  transition: background 0.25s, padding-left 0.25s;
+}
+.sidebar nav li.active a, .sidebar nav a:hover {
+  background: rgba(255,255,255,0.15); padding-left: 16px;
+}
+.sidebar footer {
+  margin-top: auto; font-size: 12px; color: #cbd5e1; text-align: center;
+}
+
+/* ===== MAIN AREA ===== */
+.main-area { flex: 1; display: flex; flex-direction: column; }
+
+/* TOPBAR */
+.topbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 24px; background: var(--white);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.topbar input {
+  width: 60%; padding: 8px 12px; border-radius: 8px;
+  border: 1px solid #e5e7eb; font-size: 14px;
+}
+.user { display: flex; align-items: center; gap: 10px; }
+.user .info p { margin: 0; font-size: 12px; color: var(--muted); }
+.user .info strong { font-size: 14px; }
+.user .info span { font-size: 12px; color: var(--muted); }
+.avatar {
+  width: 48px; height: 48px; border-radius: 50%;
+  object-fit: cover; border: 2px solid #e5e7eb;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.avatar:hover { transform: scale(1.08); box-shadow: 0 0 8px rgba(15,98,254,0.4); }
+
+/* WELCOME */
+.welcome {
+  background: var(--blue); color: #fff;
+  margin: 20px; border-radius: var(--radius); padding: 20px;
+}
+.welcome h2 { margin: 0 0 8px; font-size: 20px; }
+.welcome p { margin: 0; font-size: 14px; }
+
+/* DASHBOARD GRID */
+.dashboard {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 16px;
+  padding: 0 20px;
+}
+.card {
+  background: var(--white); border-radius: var(--radius);
+  padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 6px 14px rgba(0,0,0,0.08); }
+.stat img { width: 100%; border-radius: 8px; display: block; }
+.stat h3, .side h3 { margin-top: 0; font-size: 18px; font-weight: 600; }
+.side p { margin: 6px 0; font-size: 14px; color: var(--muted); }
+
+/* LAMPIRAN */
+.lampiran {
+  margin: 20px;
+}
+.lampiran h3 { margin: 0 0 8px; font-size: 18px; }
+.lampiran p { margin: 0 0 10px; color: var(--muted); }
+.lampiran ul li {
+  padding: 10px 0; border-bottom: 1px solid #e5e7eb; font-size: 14px;
+}
+.lampiran a {
+  color: var(--blue); font-weight: 600; text-decoration: none;
+  position: relative; transition: color .3s;
+}
+.lampiran a::after {
+  content: ""; position: absolute; bottom: -2px; left: 0;
+  width: 0; height: 2px; background: var(--blue);
+  transition: width .3s ease;
+}
+.lampiran a:hover { color: #0047ff; }
+.lampiran a:hover::after { width: 100%; }
+
+/* FOOTER */
+.footer {
+  text-align: center; font-size: 13px; color: var(--muted);
+  padding: 16px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .sidebar { display: none; }
+  .dashboard { grid-template-columns: 1fr; }
+  .topbar input { width: 100%; }
+}
+
+#userNim {
+  display: block;
+  font-size: 13px;
+  color: #6b7280; 
+  margin-top: 2px;
+}
